@@ -1,0 +1,20 @@
+
+p {
+    text-indent: auto;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size:18px;
+}
+
+.hmPgTtl{
+    font-size:27px;
+    font-weight: bold;
+}
+
+.imgcus1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200%;
+    height:100%;
+} 
