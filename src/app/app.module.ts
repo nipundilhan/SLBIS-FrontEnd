@@ -22,6 +22,7 @@ import { TutorialSubmissionComponent } from './module1_exam_prep/game1_tutorials
 import { MindmapSubmissionComponent } from './module1_exam_prep/game1_mindmaps/mindmap-submission/mindmap-submission.component';
 import { ViewTutorialsComponent } from './module1_exam_prep/game1_tutorials/view-tutorials/view-tutorials.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { AboutComponent } from './global_comman/about/about.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     SelectavatarComponent,
     TutorialSubmissionComponent,
     MindmapSubmissionComponent,
-    ViewTutorialsComponent
+    ViewTutorialsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

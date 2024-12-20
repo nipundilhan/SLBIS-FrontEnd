@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/home">SLBis</a>
+      <a class="navbar-brand" routerLink="/home">SLBIS CUSTOMER CARE</a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -14,11 +14,20 @@
             </select>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-none d-md-block" routerLink="/home">Home</a>
+            <a *ngIf="getLanguage() === 'ja'" class="nav-link" routerLink="/home">かてい</a>
+            <a *ngIf="getLanguage() === 'en'" class="nav-link" routerLink="/home">Home</a>
           </li>
+          
           <li class="nav-item">
-            <a *ngIf="getLanguage() === 'ja'" class="nav-link" routerLink="/signup">テスト</a>
-            <a *ngIf="getLanguage() === 'en'" class="nav-link" routerLink="/signup">Test</a>
+            <a *ngIf="getLanguage() === 'ja'" class="nav-link" routerLink="/test">サービス</a>
+            <a *ngIf="getLanguage() === 'en'" class="nav-link" routerLink="/test">Services</a>
+            
+          </li>
+          
+
+          <li class="nav-item">
+            <a *ngIf="getLanguage() === 'ja'" class="nav-link" routerLink="/about">について</a>
+            <a *ngIf="getLanguage() === 'en'" class="nav-link" routerLink="/about">About</a>
             
           </li>
           
@@ -45,18 +54,18 @@
 
           <ul *ngIf="isLoggedIn()" class="dropdown-menu dropdown-menu-end " aria-labelledby="profileDropdown">
                 
-                <li><a class="dropdown-item" routerLink="/profile"><i class="fas fa-user-circle"></i>  Profile</a></li>
+                <li><a class="dropdown-item" routerLink="/profile"><i class="fas fa-user-circle"></i>  Profile / プロフィール</a></li>
                 <li (click)="logout()" class="dropdown-item">
-                  <i class="fas fa-sign-out-alt icon-logout" style="color: #070707;"></i> Logout
+                  <i class="fas fa-sign-out-alt icon-logout" style="color: #070707;"></i> Logout /ログアウト
               </li>
 
             </ul>
         </li>
-
+          <!--
           <li class="nav-item">
             <a class="nav-link" routerLink="/login" *ngIf=" !isLoggedIn()">Login</a>
           </li>
-          <!--<li class="nav-item">
+          <li class="nav-item">
             <button  type="button" class="btn btn-danger" (click)="logout()" *ngIf=" isLoggedIn()" >LOGOUT</button> 
           </li>-->
         </ul>

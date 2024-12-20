@@ -16,10 +16,12 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit(): void {
 
+      
+
     }
 
 
-    selectedLanguage: string = 'ja'; // Default language
+    selectedLanguage: string = this.getLanguage(); // Default language
 
     // Method to change the language
     switchLanguage(language: string): void {
@@ -43,7 +45,11 @@ export class HeaderComponent implements OnInit {
 
 
   public getLanguage(){
-    return this.userAuthService.getLanguage();
+    if(this.userAuthService.getLanguage()){
+      return this.userAuthService.getLanguage();
+    }else{
+      return this.selectedLanguage = 'ja'
+    }
   }
 
   public setLanguage(language: string){

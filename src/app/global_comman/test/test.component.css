@@ -1,20 +1,41 @@
-
-p {
-    text-indent: auto;
-    text-align: justify;
-    letter-spacing: 1px;
-    font-size:18px;
-}
-
-.hmPgTtl{
-    font-size:27px;
+.services-header {
+    background-color: DimGrey;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .services-header h1 {
+    font-size: 2.5rem;
     font-weight: bold;
-}
-
-.imgcus1{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200%;
-    height:100%;
-} 
+  }
+  
+  .services-section {
+    padding: 40px 20px;
+  }
+  
+  .service-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 250px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures space between header and paragraph */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-card h3 {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .service-card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px; /* Ensures space before the bottom of the card */
+  }

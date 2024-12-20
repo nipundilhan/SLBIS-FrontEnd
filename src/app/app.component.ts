@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'ym';
 
 
+
+
   isSidebarVisible: boolean = false;
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -30,8 +32,11 @@ export class AppComponent {
     private userAuthService: UserAuthService,
     private router: Router
   ) {
+    
 
-
+    if(!this.userAuthService.getLanguage()){    
+      this.userAuthService.setLanguage('ja');
+    }
        this.router.navigate(['/home']);
 
 

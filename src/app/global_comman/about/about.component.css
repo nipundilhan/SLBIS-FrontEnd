@@ -1,0 +1,31 @@
+.about-header {
+    background-color: DimGrey;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .about-section {
+    padding: 40px 20px;
+  }
+  
+  .about-card {
+    background-color: snow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .about-content h3 {
+    color: #007bff;
+    font-weight: bold;
+  }

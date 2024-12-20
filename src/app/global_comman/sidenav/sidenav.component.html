@@ -1,5 +1,5 @@
 <!--<div class="sideNav-parent overflow-auto">  overflow-auto makes the sidenave scrollable-->
-    <div class="sideNav-parent ">
+ <div class="sideNav-parent ">   
         <div class="sideNav-child1 " >
     
     
@@ -7,116 +7,177 @@
                 
                 <li class="nav-item mainNavItem col-12  align-self-end" >
                     
-                    <a routerLink="/home" class="lnk nav-link  px-0 text-truncate"  >
+                    <a routerLink="/home" class="lnk nav-link  px-0 text-truncate"  >                       
                         
-                        
-                        <span class="ittxt ">HOME  PAGE</span>
+                        <i class="fas fa-home icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">HOME  </span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">かてい  </span>
     
                     </a>
                     
                 </li>
+
                 <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/test" class="lnk nav-link  px-0 text-truncate">
+                    <a routerLink="/settings" class="nav-link px-0 text-truncate">
                         
-                        <span *ngIf="getLanguage() === 'en'" class="ittxt">TEST  </span>
-                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">テスト  </span>
+                        <i class="fas fa-building icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">COMPANY</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">会社 </span>
                     </a>
                 </li>
+
                 <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/view-tutorials" class="lnk nav-link  px-0 text-truncate">
-                        
-                        <span class="ittxt" >Tutorials</span>
+                    <a routerLink="/forbidden" class="nav-link  px-0 text-truncate">
+                        <i class="fas fa-envelope icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">INQURIES</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">問い合わせ </span>
                     </a>
                 </li>
     
     
             </ul>
+
             <ul class="nav nav-pills=" id="menu22" >
     
                 <li class=" itm2 col-12 ">
                     
-                    <a href="#submenu22" data-bs-toggle="collapse" class="nav-link px-0  col-12">
+                    <a href="#submenu22" data-bs-toggle="collapse" class="nav-link px-0  col-12 text-truncate">
                         
     
-                        
-                        <span class="  ittxt2">TEST</span>  </a>
+                        <i class="fas fa-user-shield icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">ADMIN</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">管理者 </span>
+                    </a>
                     <!--show-->
                     <ul class="collapse  nav  nav-pills " id="submenu22" data-bs-parent="#menu22">
                         <li class="w-100 itm4  px-0  col-12 " >
-                            <a routerLink="/calender-view" class="nav-link  px-0  col-12">
-                                <span class="d-none d-sm-inline itsbtxt">Lab Test Calender</span>  </a>
+                            <a routerLink="/calender-view" class="nav-link  px-0  col-12 text-truncate" >
+                                <span *ngIf="getLanguage() === 'en'" class="itsbtxt">Company</span>
+                                <span *ngIf="getLanguage() === 'ja'"class="itsbtxt">会社 </span>
+                            </a>
                         </li>
                         <li class="w-100 itm4 " >
-                            <a routerLink="/test-customer" class="nav-link  px-0">
-                                <span class="d-none d-sm-inline itsbtxt">View My Results</span> </a>
+                            <a routerLink="/test-customer" class="nav-link  px-0 text-truncate">
+                                <span *ngIf="getLanguage() === 'en'" class="itsbtxt">User</span>
+                                <span *ngIf="getLanguage() === 'ja'"class="itsbtxt">ユーザー </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav nav-pills=" id="menu24" >
+    
+                <li class=" itm2 col-12 ">
+                    
+                    <a href="#submenu24" data-bs-toggle="collapse" class="nav-link px-0  col-12 text-truncate">
+                        
+    
+                        <i class="fas fa-envelope icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">INQURIES</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">問い合わせ </span>
+                  </a>
+                    <!--show-->
+                    <ul class="collapse  nav  nav-pills " id="submenu24" data-bs-parent="#menu24">
+                        <li class="w-100 itm4  px-0  col-12 " >
+                            <a routerLink="/calender-view" class="nav-link  px-0  col-12 text-truncate" >
+                                <span *ngIf="getLanguage() === 'en'" class="itsbtxt">Pending</span>
+                                <span *ngIf="getLanguage() === 'ja'"class="itsbtxt">ほりゅう </span>  
+                            </a>
+                        </li>
+                        <li class="w-100 itm4 " >
+                            <a routerLink="/test-customer" class="nav-link  px-0 text-truncate">
+                                <span *ngIf="getLanguage() === 'en'" class="itsbtxt">Verfied</span>
+                                <span *ngIf="getLanguage() === 'ja'"class="itsbtxt">けんしょうずみ </span>
+                            </a>
+
                         </li>
                     </ul>
                 </li>
             </ul>
 
 
+
     
             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu3">
+
+
+
                 <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
-                        
-                        
-                        <span class="ittxt">HELP</span>
-                    </a>
-                </li>
-                <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/settings" class="nav-link px-0 text-truncate">
-                        
-                        
-                        <span class="ittxt"></span>
-                    </a>
-                </li>
-                <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/forbidden" class="nav-link  px-0">
-                        <i class="fs-4 bi-house"></i>
-                        
-                        <span class="ittxt"></span>
-                    </a>
-                </li>
-                <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/yellow-page" class="nav-link  px-0">
-                        <i class="fs-4 bi-house"></i>
-                        
-                        <span class="ittxt"></span>
-                    </a>
-                </li>
-                <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a class="nav-link  px-0">
-                        <i class="fs-4 bi-house"></i>
-                        
-                        <span class="ittxt"></span>
-                    </a>
-                </li>
-                <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a class="nav-link  px-0">
-                        <i class="fs-4 bi-house"></i>
-                        
-                        <span class="ittxt"></span>
+                    <a routerLink="/yellow-page" class="nav-link  px-0 text-truncate">
+                        <i class="fas fa-users icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">USERS</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">ユーザー </span>
                     </a>
                 </li>
 
-    
-    
-    
-    
-    
+                <li class="nav-item mainNavItem col-12 align-self-end">
+                    <a routerLink="/test" class="lnk nav-link  px-0 text-truncate">
+                        <i class="fas fa-concierge-bell icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">SERVICES  </span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">サービス  </span>
+                    </a>
+                </li>
+
+                <li class="nav-item mainNavItem col-12 align-self-end">
+                    <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
+                        
+                        <i class="fas fa-comment  icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">FEEDBACKS</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">フィードバック </span>
+                    </a>
+                </li>
+
+                <li class="nav-item mainNavItem col-12 align-self-end">
+                    <a class="nav-link  px-0 text-truncate">
+                        <i class="fas fa-user-circle icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">PROFILE  </span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">プロフィール  </span>
+                    </a>
+                </li>
+
+                <li class="nav-item mainNavItem col-12 align-self-end">
+                    <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
+                        
+                        <i class="fas fa-sliders-h  icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">CONTROLS</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">制御 </span>
+                    </a>
+                </li>
+
+                <li class="nav-item mainNavItem col-12 align-self-end">
+                    <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
+                        
+                        <i class="fas fa-tools  icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">SETTINGS</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">設定 </span>
+                    </a>
+                </li>
+
+
+
+
+                <li class="nav-item mainNavItem col-12 align-self-end">
+                    <a routerLink="/about" class="lnk nav-link  px-0 text-truncate">
+                        <i class="fas fa-info-circle icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">ABOUT  </span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">について </span>
+                    </a>
+                </li>
+   
+                <li class="nav-item mainNavItem col-12 align-self-end">
+                    <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
+                        
+                        <i class="fas fa-cog icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">HELP</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">ヘルプ </span>
+                    </a>
+                </li>
+        
             </ul>
-    
-    
     
             <hr>
         </div>
-    
-    
-    
-    
-    
-        
-    
+
     </div>
     

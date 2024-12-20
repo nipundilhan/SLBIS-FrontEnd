@@ -7,10 +7,12 @@ import { SignupComponent } from './global_comman/signup/signup.component';
 import { SelectavatarComponent } from './global_comman/selectavatar/selectavatar.component';
 import { TutorialSubmissionComponent } from './module1_exam_prep/game1_tutorials/tutorial-submission/tutorial-submission.component';
 import { ViewTutorialsComponent } from './module1_exam_prep/game1_tutorials/view-tutorials/view-tutorials.component';
+import { AboutComponent } from './global_comman/about/about.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'test', component: TestComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'select-avatar', component: SelectavatarComponent },
   { path: 'tutorial-submission', component: TutorialSubmissionComponent },
