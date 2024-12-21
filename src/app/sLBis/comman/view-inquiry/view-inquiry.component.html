@@ -1,0 +1,108 @@
+<div class="container mt-4"  *ngIf="inquiryDetails" style="background-color: #F5F5F5; padding: 10px;  border-radius: 10px;">
+    
+    <h2 class="text-center ">VIEW INQUIRY</h2>
+    
+    
+    <form class="mt-3">
+      <!-- First Row -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="title" class="bold-label">Title</label>
+          <input type="text" class="form-control" id="title" [(ngModel)]="inquiryDetails.title" [ngModelOptions]="{standalone: true}" disabled>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="companyCode" class="bold-label">Company Code</label>
+          <input type="text" class="form-control" id="companyCode" [(ngModel)]="inquiryDetails.companyCode" [ngModelOptions]="{standalone: true}" disabled>
+        </div>
+      </div>
+  
+      <!-- Second Row -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="customerName" class="bold-label">Customer Name</label>
+          <input type="text" class="form-control" id="customerName" [(ngModel)]="inquiryDetails.customerName" [ngModelOptions]="{standalone: true}" disabled>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="email" class="bold-label">Email</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="inquiryDetails.email" [ngModelOptions]="{standalone: true}" disabled>
+        </div>
+      </div>
+  
+      <!-- Third Row -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="contactNo" class="bold-label">Contact No</label>
+          <input type="text" class="form-control" id="contactNo" [(ngModel)]="inquiryDetails.contactNo" [ngModelOptions]="{standalone: true}" disabled>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="status" class="bold-label">Status</label>
+          <input type="text" class="form-control" id="status" [(ngModel)]="inquiryDetails.status" [ngModelOptions]="{standalone: true}" disabled>
+        </div>
+      </div>
+  
+      <!-- Fourth Row -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="date" class="bold-label">Date</label>
+          <input type="text" class="form-control" id="date" [(ngModel)]="inquiryDetails.date" [ngModelOptions]="{standalone: true}" disabled>
+        </div>
+      </div>
+  
+      <!-- Description Row -->
+      <div class="form-group">
+        <label for="description" class="bold-label">Description</label>
+        <textarea class="form-control" id="description" rows="3" [(ngModel)]="inquiryDetails.description" [ngModelOptions]="{standalone: true}" disabled></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="note" class="bold-label">Company Complete Note</label>
+        <div [innerHTML]="htmlContent" style="background-color: #FDF5E6; padding: 10px; border-radius: 10px;"></div>
+      </div>
+      
+    </form>
+
+    <div class="row">
+        <div *ngFor="let attachment of inquiryDetails.attachments" class="col-md-3 file-preview">
+          <div class="attachment-container">
+            <img *ngIf="attachment.contentType.startsWith('image/')" 
+              [src]="'data:' + attachment.contentType + ';base64,' + attachment.data" 
+              alt="{{ attachment.filename }}" 
+              style="width: 120px; height: 120px; display: block; margin: 10px 0;" 
+            />
+            <img *ngIf="attachment.contentType === 'application/pdf'" 
+              style="width: 120px; height: 120px;" 
+              src="assets/pdf-icon.png" 
+              alt="PDF Preview" 
+            />
+            <p>{{ attachment.filename }}</p>
+            <button type="button" class="btn btn-primary" (click)="viewFile(attachment) ; $event.stopPropagation()">View</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="mt-4"  style="border: none; border-top: 2px solid white; margin: 0;">
+      <hr class="mt-4"  style="border: none; border-top: 2px solid black; margin: 0;">
+
+      <div class="mt-3" style="background-color: #FDF5E6; padding: 10px; border-radius: 10px;">
+        <h3>Comapany Comments</h3>
+        <table class="table table-striped table-bordered mt-3" >
+            <thead style="background-color: #000; color: white;">
+              <tr>
+                <th class="hide-on-small">Date</th>
+                <th>Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let comment of inquiryDetails.comments">
+                <td class="date-column hide-on-small">{{ comment.date | date: 'shortDate' }}</td>
+                <td>{{ comment.comment }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+
+  </div>

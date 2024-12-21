@@ -19,9 +19,13 @@
           </li>
           
           <li class="nav-item">
-            <a *ngIf="getLanguage() === 'ja'" class="nav-link" routerLink="/test">サービス</a>
-            <a *ngIf="getLanguage() === 'en'" class="nav-link" routerLink="/test">Services</a>
-            
+            <a *ngIf="getLanguage() === 'ja'" class="nav-link" routerLink="/products">サービス</a>
+            <a *ngIf="getLanguage() === 'en'" class="nav-link" routerLink="/products">Services</a>            
+          </li>
+
+          <li class="nav-item">
+            <a *ngIf="getLanguage() === 'ja'" class="nav-link" routerLink="/customer-inquiry">問い合わせ</a>
+            <a *ngIf="getLanguage() === 'en'" class="nav-link" routerLink="/customer-inquiry">Inquiry</a>            
           </li>
           
 

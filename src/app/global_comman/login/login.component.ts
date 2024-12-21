@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
       (response: any) => {
 
         this.userAuthService.setRole(response.user.role);
+        this.userAuthService.setCompanyCode(response.user.avatarCode);
         this.userAuthService.setToken(response.jwtToken);
         this.userAuthService.setUserName(response.user.username);
         this.userAuthService.setUserId(response.user.userId);
@@ -37,7 +38,7 @@ export class LoginComponent implements OnInit {
         } else if (role === 'STUDENT') {
           this.router.navigate(['/test']);
         } else {
-          this.router.navigate(['/test']);
+          this.router.navigate(['/home']);
         } 
 
       },

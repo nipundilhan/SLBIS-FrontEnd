@@ -23,6 +23,14 @@ import { MindmapSubmissionComponent } from './module1_exam_prep/game1_mindmaps/m
 import { ViewTutorialsComponent } from './module1_exam_prep/game1_tutorials/view-tutorials/view-tutorials.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { AboutComponent } from './global_comman/about/about.component';
+import { InquiryCreateComponent } from './sLBis/comman/inquiry-create/inquiry-create.component';
+import { InquiriesViewComponent } from './sLBis/comman/inquiries-view/inquiries-view.component';
+import { ViewInquiryComponent } from './sLBis/comman/view-inquiry/view-inquiry.component';
+import { CustomerInquiryComponent } from './sLBis/customer/customer-inquiry/customer-inquiry.component';
+import { CompanyComponent } from './sLBis/admin/company/company.component';
+import { CompanyUsersComponent } from './sLBis/admin/company-users/company-users.component';
+import { ManageInquiryComponent } from './sLBis/comman/manage-inquiry/manage-inquiry.component';
+import { ProductsViewComponent } from './sLBis/comman/products-view/products-view.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +46,15 @@ import { AboutComponent } from './global_comman/about/about.component';
     TutorialSubmissionComponent,
     MindmapSubmissionComponent,
     ViewTutorialsComponent,
-    AboutComponent
+    AboutComponent,
+    InquiryCreateComponent,
+    InquiriesViewComponent,
+    ViewInquiryComponent,
+    CustomerInquiryComponent,
+    CompanyComponent,
+    CompanyUsersComponent,
+    ManageInquiryComponent,
+    ProductsViewComponent
   ],
   imports: [
     BrowserModule,

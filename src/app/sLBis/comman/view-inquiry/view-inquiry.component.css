@@ -1,0 +1,26 @@
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .bold-label {
+    font-weight: bold; /* Makes the text bold */
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  thead {
+    background-color: #000;
+    color: white;
+  }
+
+
+    /* Make table responsive on smaller screens */
+    @media (max-width: 768px) {
+    
+        .hide-on-small {
+            display: none !important; /* Hide the columns on small screens */
+          }
+      }

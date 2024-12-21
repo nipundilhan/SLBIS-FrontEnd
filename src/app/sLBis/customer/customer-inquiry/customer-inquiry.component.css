@@ -1,0 +1,33 @@
+.text-right {
+    text-align: right;
+  }
+  
+  /* Style for the search form container */
+  .row {
+    background-color: #F5F5F5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Ensures the form is responsive and adjusts to smaller screens */
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .input-group .form-control {
+    flex: 1;
+  }
+  
+  .input-group-append button {
+    flex-shrink: 0;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .col-md-6 {
+      width: 100% !important;
+    }
+  }

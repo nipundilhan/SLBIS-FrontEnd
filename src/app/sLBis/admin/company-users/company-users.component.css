@@ -1,0 +1,29 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .table th,
+  .table td {
+    text-align: center;
+  }
+  
+  .table td {
+    padding: 10px;
+  }
+  
+  .pagination {
+    margin-top: 15px;
+  }
+  
+  .pagination .page-item {
+    cursor: pointer;
+  }
+  
+  .pagination .page-link {
+    padding: 8px 16px;
+  }
+  
+  .btn {
+    margin-top: 5px;
+  }

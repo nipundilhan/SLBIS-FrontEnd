@@ -49,6 +49,14 @@ export class UserAuthService {
     return localStorage.getItem('role')! ;
   }
 
+  public setCompanyCode(company: string) {
+    localStorage.setItem('company', company);
+  }
+
+  public getCompanyCode(): string {
+    return localStorage.getItem('company')! ;
+  }
+
   
   public setToHome(toHome: string) {
     localStorage.setItem('toHome', toHome);
