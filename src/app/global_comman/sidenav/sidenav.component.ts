@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserAuthService } from 'src/app/_services/user-auth.service';
 
 
@@ -9,7 +10,8 @@ import { UserAuthService } from 'src/app/_services/user-auth.service';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor(private userAuthService: UserAuthService) { }
+  constructor(private userAuthService: UserAuthService,
+        private router: Router ) { }
 
   ngOnInit(): void {
 
@@ -24,5 +26,13 @@ export class SidenavComponent implements OnInit {
   getRole(){
     return this.userAuthService.getRole();
   }
+
+  public logout() {
+    //this.usrNm = "";
+    this.userAuthService.clear();
+    this.userAuthService.setLanguage('en');
+    this.router.navigate(['/home']);
+  }
+
 
 }

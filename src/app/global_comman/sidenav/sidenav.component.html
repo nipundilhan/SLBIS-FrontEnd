@@ -167,9 +167,18 @@
                 <li class="nav-item mainNavItem col-12 align-self-end">
                     <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
                         
-                        <i class="fas fa-cog icon"></i>
+                        <i class="fas fa-question-circle icon"></i>
                         <span *ngIf="getLanguage() === 'en'" class="ittxt">HELP</span>
                         <span *ngIf="getLanguage() === 'ja'"class="ittxt">ヘルプ </span>
+                    </a>
+                </li>
+
+                <li class="nav-item mainNavItem col-12 align-self-end" >
+                    <a (click)="logout()" class="nav-link  px-0 text-truncate">
+                        
+                        <i class="fas fa-cog icon"></i>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">LOGOUT</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">ログアウトする </span>
                     </a>
                 </li>
         
