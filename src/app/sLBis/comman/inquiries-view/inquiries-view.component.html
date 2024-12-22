@@ -8,18 +8,20 @@
         <select id="companyCode" [(ngModel)]="searchParams.companyCode" class="form-control" [disabled]="getRole() === 'COMPANYADMIN'">
           <option value="">Select Company</option>
           <option value="GIFT_PLANTS">Gift Plants</option>
-          <option value="SL_BIS">Sl Bis</option>
           <option value="LUMALA">Lumala</option>
+          <option value="WATAWALA">Watawala</option>
+          <option value="ASIRI_wATCH">Asiri Watches</option>
         </select>
       </div>
   
       <div class="col-md-3">
         <label for="status" style="font-weight: bold;">Status:</label>
         <select id="status" [(ngModel)]="searchParams.status" class="form-control">
-          <option value="">Select Status</option>
-          <option value="VERIFICATION_PENDING">Verification Pending</option>
+          <option value="NONE">Select Status</option>
+          <option value="VERIFICATION_PENDING" *ngIf="getRole() !== 'COMPANYADMIN'">Verification Pending</option>
           <option value="VERIFIED">Verified</option>
-          <option value="CLOSED">Closed</option>
+          <option value="COMPLETED">Completed</option>
+          <option value="REJECTED">Rejected</option>
         </select>
       </div>
   

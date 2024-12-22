@@ -150,8 +150,8 @@
 
 
       <div class="button-container mt-2" *ngIf="getRole() === 'ROOTADMIN' ">
-        <button class="btn btn-danger" (click)="reject()"  [disabled]="inquiryDetails?.status === 'REJECTED'">REJECT</button>
-        <button class="btn btn-success" (click)="verify()" style="margin-left:10px;" [disabled]="inquiryDetails?.status === 'VERIFIED' || inquiryDetails?.status === 'REJECTED'">VERIFY</button>
+        <button class="btn btn-danger" (click)="reject()"  [disabled]="inquiryDetails?.status === 'REJECTED' || inquiryDetails?.status === 'COMPLETED' || inquiryDetails?.status === 'VERIFIED'">REJECT</button>
+        <button class="btn btn-success" (click)="verify()" style="margin-left:10px;" [disabled]="inquiryDetails?.status === 'REJECTED' || inquiryDetails?.status === 'COMPLETED' || inquiryDetails?.status === 'VERIFIED'">VERIFY</button>
       </div>
 
       <div class="button-container mt-2"  *ngIf="getRole() === 'COMPANYADMIN'">

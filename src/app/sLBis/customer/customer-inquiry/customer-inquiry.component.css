@@ -2,6 +2,10 @@
     text-align: right;
   }
   
+
+  .text-center {
+    text-align: center;
+  }
   /* Style for the search form container */
   .row {
     background-color: #F5F5F5;
@@ -30,4 +34,8 @@
     .col-md-6 {
       width: 100% !important;
     }
+
+    .hide-on-small {
+        display: none !important; /* Hide the columns on small screens */
+      }
   }

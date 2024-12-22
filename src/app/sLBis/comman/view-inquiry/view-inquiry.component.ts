@@ -31,10 +31,7 @@ export class ViewInquiryComponent implements OnInit {
     // Get the 'id' parameter from the route
     const inquiryId = this.route.snapshot.paramMap.get('id');
 
-    if (this.userAuthService.getRole() !== "ROOTADMIN" && this.userAuthService.getRole() !== "COMPANYADMIN") {
-      alert("Access denied");
-      this.router.navigate(['/home']);
-    }
+
 
     
     // if (inquiryId) {

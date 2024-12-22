@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserAuthService } from 'src/app/_services/user-auth.service';
 
 
 @Component({
@@ -22,9 +24,15 @@ export class CompanyComponent implements OnInit {
     email: '',
   };
 
-  constructor() {}
+  constructor(       private router: Router, private userAuthService: UserAuthService ) {}
 
   ngOnInit(): void {
+
+    if (this.userAuthService.getRole() !== "ROOTADMIN" && this.userAuthService.getRole() !== "COMPANYADMIN") {
+      alert("Access denied");
+      this.router.navigate(['/home']);
+    }
+
     this.loadDummyData();
     this.updatePaginatedCompanies();
     this.generatePaginationArray();

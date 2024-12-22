@@ -17,7 +17,7 @@
                     
                 </li>
 
-                <li class="nav-item mainNavItem col-12 align-self-end">
+                <li class="nav-item mainNavItem col-12 align-self-end" *ngIf="getRole() === 'ROOTADMIN'">
                     <a routerLink="/test" class="nav-link px-0 text-truncate">
                         
                         <i class="fas fa-building icon"></i>
@@ -26,7 +26,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item mainNavItem col-12 align-self-end">
+                <li class="nav-item mainNavItem col-12 align-self-end" *ngIf="getRole() === 'ROOTADMIN'">
                     <a routerLink="/view-inquiries" class="nav-link  px-0 text-truncate">
                         <i class="fas fa-envelope icon"></i>
                         <span *ngIf="getLanguage() === 'en'" class="ittxt">INQURIES</span>
@@ -37,7 +37,7 @@
     
             </ul>
 
-            <ul class="nav nav-pills=" id="menu22" >
+            <ul class="nav nav-pills=" id="menu22" *ngIf="getRole() === 'ROOTADMIN'">
     
                 <li class=" itm2 col-12 ">
                     
@@ -81,8 +81,14 @@
                     <ul class="collapse  nav  nav-pills " id="submenu24" data-bs-parent="#menu24">
                         <li class="w-100 itm4  px-0  col-12 " >
                             <a routerLink="/view-inquiries" class="nav-link  px-0  col-12 text-truncate" >
-                                <span *ngIf="getLanguage() === 'en'" class="itsbtxt">Inquiries</span>
-                                <span *ngIf="getLanguage() === 'ja'"class="itsbtxt">問い合わせ  </span>  
+                                <span *ngIf="getLanguage() === 'en'" class="itsbtxt">All</span>
+                                <span *ngIf="getLanguage() === 'ja'"class="itsbtxt">すべて </span>  
+                            </a>
+                        </li>
+                        <li class="w-100 itm4  px-0  col-12 " >
+                            <a routerLink="/view-inquiries" class="nav-link  px-0  col-12 text-truncate" >
+                                <span *ngIf="getLanguage() === 'en'" class="itsbtxt">Peding</span>
+                                <span *ngIf="getLanguage() === 'ja'"class="itsbtxt">ほりゅう  </span>  
                             </a>
                         </li>
                     </ul>
@@ -105,23 +111,23 @@
                 </li>
 
                 <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/test" class="lnk nav-link  px-0 text-truncate">
+                    <a routerLink="/products" class="lnk nav-link  px-0 text-truncate">
                         <i class="fas fa-concierge-bell icon"></i>
-                        <span *ngIf="getLanguage() === 'en'" class="ittxt">SERVICES  </span>
-                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">サービス  </span>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">PRODUCTS  </span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">せいひん  </span>
                     </a>
                 </li>
 
                 <li class="nav-item mainNavItem col-12 align-self-end">
-                    <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
+                    <a routerLink="/test" class="nav-link  px-0 text-truncate">
                         
                         <i class="fas fa-comment  icon"></i>
-                        <span *ngIf="getLanguage() === 'en'" class="ittxt">FEEDBACKS</span>
-                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">フィードバック </span>
+                        <span *ngIf="getLanguage() === 'en'" class="ittxt">SERVICES</span>
+                        <span *ngIf="getLanguage() === 'ja'"class="ittxt">サービス </span>
                     </a>
                 </li>
 
-                <li class="nav-item mainNavItem col-12 align-self-end">
+                <li class="nav-item mainNavItem col-12 align-self-end" >
                     <a class="nav-link  px-0 text-truncate">
                         <i class="fas fa-user-circle icon"></i>
                         <span *ngIf="getLanguage() === 'en'" class="ittxt">PROFILE  </span>
@@ -129,7 +135,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item mainNavItem col-12 align-self-end">
+                <li class="nav-item mainNavItem col-12 align-self-end" *ngIf="getRole() === 'ROOTADMIN'">
                     <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
                         
                         <i class="fas fa-sliders-h  icon"></i>
@@ -138,7 +144,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item mainNavItem col-12 align-self-end">
+                <li class="nav-item mainNavItem col-12 align-self-end" *ngIf="getRole() === 'ROOTADMIN'">
                     <a routerLink="/view-products-non-log" class="nav-link  px-0 text-truncate">
                         
                         <i class="fas fa-tools  icon"></i>

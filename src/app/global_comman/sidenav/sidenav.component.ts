@@ -21,4 +21,8 @@ export class SidenavComponent implements OnInit {
     return this.userAuthService.getLanguage();
   }
 
+  getRole(){
+    return this.userAuthService.getRole();
+  }
+
 }

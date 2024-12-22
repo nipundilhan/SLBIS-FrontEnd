@@ -13,7 +13,7 @@ export class AppComponent {
 
 
 
-  isSidebarVisible: boolean = false;
+  isSidebarVisible: boolean = true;
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.checkMobileView();
@@ -35,7 +35,7 @@ export class AppComponent {
     
 
     if(!this.userAuthService.getLanguage()){    
-      this.userAuthService.setLanguage('ja');
+      this.userAuthService.setLanguage('en');
     }
        this.router.navigate(['/home']);
 

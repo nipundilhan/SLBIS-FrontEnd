@@ -88,6 +88,11 @@ export class InquiriesViewComponent implements OnInit {
   search(): void {
     this.currentPage = 1;  // Reset to the first page when performing a search
 
+    if (!this.searchParams.companyCode && !this.searchParams.status) {
+      alert("please select values for both dropdowns");
+      return;
+    }
+
     const { companyCode, status } = this.searchParams;
 
     // Correct string interpolation for URL construction

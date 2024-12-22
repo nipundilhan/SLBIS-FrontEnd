@@ -29,3 +29,17 @@
     color: #007bff;
     font-weight: bold;
   }
+
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    border: 2px solid #ddd; /* Optional border */
+    object-fit: cover;
+    margin: 0 auto; /* Center the image */
+    display: block;
+  }

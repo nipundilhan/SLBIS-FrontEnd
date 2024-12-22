@@ -32,6 +32,8 @@ export class HeaderComponent implements OnInit {
   public logout() {
     //this.usrNm = "";
     this.userAuthService.clear();
+    this.userAuthService.setLanguage('en');
+    this.selectedLanguage = 'en';
     this.router.navigate(['/home']);
   }
 
@@ -54,6 +56,10 @@ export class HeaderComponent implements OnInit {
 
   public setLanguage(language: string){
      this.userAuthService.setLanguage(language);
+  }
+
+  getRole(){
+    return this.userAuthService.getRole();
   }
 
 

@@ -16,8 +16,9 @@
         <select id="companyCode" formControlName="companyCode" class="form-control" required>
           <option value="">Select Company</option>
           <option value="GIFT_PLANTS">Gift Plants</option>
-          <option value="SL_BIS">Sl Bis</option>
           <option value="LUMALA">Lumala</option>
+          <option value="WATAWALA">Watawala</option>
+          <option value="ASIRI_wATCH">Asiri Watches</option>
         </select>
         <div *ngIf="inquiryForm.get('companyCode')?.touched && inquiryForm.get('companyCode')?.invalid" class="text-danger">
           Company is required.

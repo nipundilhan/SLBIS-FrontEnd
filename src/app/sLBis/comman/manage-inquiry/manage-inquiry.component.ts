@@ -104,6 +104,8 @@ export class ManageInquiryComponent implements OnInit {
   submitComment() {
     //console.log(this.comment);
 
+
+
     let req = {
       inquiryId: this.inquiryId,
       comment: this.comment
@@ -126,6 +128,8 @@ export class ManageInquiryComponent implements OnInit {
 
 
   submitMessage() {
+
+
 
     let req = {
       inquiryId: this.inquiryId,
@@ -195,6 +199,20 @@ export class ManageInquiryComponent implements OnInit {
 
   
   complete() {
+
+
+    if (this.inquiryDetails.messages && this.inquiryDetails.messages.length === 0) {
+      alert("please add complete message");
+      return;
+    }
+
+    if (this.inquiryDetails.comments && this.inquiryDetails.comments.length < 2) {
+      alert("please add atleast 2 comments");
+      return;
+    }
+
+
+
     let req = {
       inquiryId: this.inquiryId,
       status: "COMPLETED"
