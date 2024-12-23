@@ -69,6 +69,10 @@
   background-color: royalblue;
 }
 
+.nav-item .nav-link {
+  margin-left: 10px; /* Adjust the value as needed */
+}
+
 
   /*  to take nav items text in to middle in mobile view */
 

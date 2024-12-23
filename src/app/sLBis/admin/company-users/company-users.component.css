@@ -1,29 +1,99 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
+.text-right {
+    text-align: right;
   }
   
-  .table th,
-  .table td {
+
+  .text-center {
     text-align: center;
   }
+  /* Style for the search form container */
+  .row {
+    background-color: #F5F5F5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
   
-  .table td {
-    padding: 10px;
+  /* Ensures the form is responsive and adjusts to smaller screens */
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .input-group .form-control {
+    flex: 1;
+  }
+  
+  .input-group-append button {
+    flex-shrink: 0;
+  }
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures that columns are evenly distributed */
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    word-wrap: break-word; /* Prevent long words from breaking the layout */
+  }
+  
+  th {
+    background-color: #f2f2f2;
   }
   
   .pagination {
-    margin-top: 15px;
+    margin-top: 20px;
   }
   
-  .pagination .page-item {
-    cursor: pointer;
+  .pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
   }
   
   .pagination .page-link {
-    padding: 8px 16px;
+    color: #007bff;
+    cursor: pointer;
   }
   
-  .btn {
-    margin-top: 5px;
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Adjust this value as needed */
+  }
+  
+  .date-column {
+    width: 120px; /* Fixed width for Date column */
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    .truncate {
+      max-width: 120px; /* Adjust truncation width for smaller screens */
+    }
+  
+    .date-column {
+      width: 80px; /* Adjust Date column width on mobile */
+    }
+  
+    /* Make text inside table more readable on smaller screens */
+    table {
+      font-size: 10px;
+    }
+
+    .hide-on-small {
+        display: none !important; /* Hide the columns on small screens */
+      }
   }
